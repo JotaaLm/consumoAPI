@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha no topo */
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    position: relative; /* Garante que tudo fique visível */
+    overflow-y: auto; /* Se precisar, cria um scroll interno */
+    max-height: 90vh; /* Impede que a div fique muito grande */
+}
+
+.search-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: sticky; /* Fixa no topo */
+    top: 0;
+    background: white;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+input:focus {
+    border-color: #2a00fd;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #2a00fd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #1e00b3;
+}
+
+#games-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-height: 70vh; /* Evita que a lista de jogos empurre a busca */
+    overflow-y: auto; /* Adiciona um scroll se a lista for muito longa */
+}
+
+#games-list li {
+    background: #fff;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#games-list img {
+    width: 100%;
+    max-width: 200px; /* Impede imagens gigantes */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.game-title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+.game-description {
+    font-size: 14px;
+    color: #666;
+}
